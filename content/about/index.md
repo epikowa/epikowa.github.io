@@ -38,3 +38,6 @@ In order to improve the current situation, here's what Epikowa do or plan to do:
 * Write and publish articles, podcasts and videos to improve the general public's digital literacy
 * Create open source libraries and tools to help with creating widely available services and softwares
 * Offer commercial services and softwares
+
+
+Epikowa currently is a personal project by Benjamin Dasnois and therefor does not currently offer any commercial services.  
