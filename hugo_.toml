@@ -1,0 +1,5 @@
+baseURL = 'https://epikowa.eu/'
+languageCode = 'en-en'
+title = "Epikowa"
+theme = 'ananke'
+sectionPagesMenu = "main"
