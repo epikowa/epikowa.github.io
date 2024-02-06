@@ -7,17 +7,17 @@ draft = false
 ### What Epikowa is
 Considering that computing and its implications are now paramount, if not central, in people's life, Epikowa's founder, a European humanist, politically-aware, developer and entrepreneur, realised that there are several pillars required for individuals to be fully-enabled free citizens :
 
-*  Computer and internet litteracy
+*  Computer and internet literacy
 *  Data sovereignty
 *  Ability to kickstart projects at low cost
 
 From this, the Epikowa initiative was born.
 
-### Computer and internet litteracy
+### Computer and internet literacy
 In the last two decades, as computers, the internet and mobile computers got more proeminent in peoples' lives, we saw an increase in computing-centred scams.  
-Many of them could be avoided if people had basic understanding in computer litteracy and if they were correctly taught about it. Unfortunately, in the last 20 years, we've mostly seen bad vulgarisation such as the terrible padlock icon.  
+Many of them could be avoided if people had basic understanding in computer literacy and if they were correctly taught about it. Unfortunately, in the last 20 years, we've mostly seen bad vulgarisation such as the terrible padlock icon.  
 
-Digital litteracy also is needed for citizens to be able to understand computing-oriented laws and regulations as those might focus on free-speech and personal data collection, therefor fairfully regulating or illfully impairing free speech.  
+Digital literacy also is needed for citizens to be able to understand computing-oriented laws and regulations as those might focus on free-speech and personal data collection, therefor fairfully regulating or illfully impairing free speech.  
 Epikowa believes that citizens should, in the full awareness required by democracy, be able to form an opinion regarding such laws and regulations.
 
 ### Data sovereignty
@@ -35,6 +35,6 @@ This also helps with data sovereignty and therefor also benefits states.
 ### What Epikowa do
 In order to improve the current situation, here's what Epikowa do or plan to do:
 
-* Write and publish articles, podcasts and videos to improve the general public's digital litteracy
+* Write and publish articles, podcasts and videos to improve the general public's digital literacy
 * Create open source libraries and tools to help with creating widely available services and softwares
 * Offer commercial services and softwares
