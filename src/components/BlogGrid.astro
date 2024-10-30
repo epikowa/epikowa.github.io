@@ -1,0 +1,54 @@
+---
+import '../styles/globals.css'
+import { UIStrings, getLang, getLocaleString } from '../UI'
+
+const lang = getLang(Astro.url.toString())
+console.log('lang', lang);
+---
+
+<div class="grid">
+    <div class='blog-grid'>
+        <div>
+            <slot />
+        </div>
+        <div class="action-card">
+            <h2 class="title">{getLocaleString('about', lang)}</h2>
+            <div class="wrapper">
+                <p>Epikowa is a project that recognizes that IT technologies are at the center of modern society.</p>
+                <p>As such, Epikowa is a wide project that provides tools, libraries and solutions for developers to create tools that are as sovereign (read more here) as possible.</p>
+                <p>Non-developers will find ressources to learn about the IT fundamentals they should know in a fun and easy way.</p>
+                <p>You will also find articles about European and French politics.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .blog-grid {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+    }
+    .action-card {
+        margin: 16px;
+        padding: 8px 16px;
+        border-radius: 16px;
+        background-color: var(--bittersweet);
+        color: white;
+        height: fit-content;
+        position: sticky;
+        top: 2em;
+        /* min-height: 25vh; */
+    }
+
+    .action-card > .title {
+        display: inline-block;
+        color: var(--columbia-blue);
+        transform: rotate(-90deg) translate(-100%, -70%);
+        transform-origin: 0 0;
+        position: absolute;
+        font-size: 1.5em;
+    }
+
+    .action-card > .wrapper {
+        margin: 1em;
+    }
+</style>

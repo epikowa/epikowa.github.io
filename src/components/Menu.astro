@@ -1,0 +1,21 @@
+---
+import '../styles/colors.css';
+import MenuItem from './MenuItem.astro';
+---
+<style>
+    .main-container {
+        display: flex;
+        background-color: var(--ghost-white);
+        color: black;
+        justify-content: space-evenly;
+        margin: 1em 0;
+    }
+
+    .link {
+        cursor: pointer;
+    }
+</style>
+<div class="main-container">
+    <MenuItem title='Blog' icon='hugeicons:pencil'></MenuItem>
+    <MenuItem title='Articles' icon='hugeicons:book-02'></MenuItem>
+</div>

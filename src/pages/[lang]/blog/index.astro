@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+import BlogGrid from "../../../components/BlogGrid.astro";
+import BlogRow from "../../../components/BlogRow.astro";
+
+export async function getStaticPaths() {
+    return [
+        {
+            params: {
+                lang: "en",
+            },
+            props: {
+                lang: "en",
+            },
+        },
+        {
+            params: {
+                lang: "fr",
+            },
+            props: {
+                lang: "fr",
+            },
+        },
+    ];
+}
+
+const blogPosts = await getCollection("blog");
+const filteredPosts = blogPosts.filter((post) => {
+    const [lang] = post.slug.split("/");
+    console.log(lang, lang == Astro.props.lang);
+    return lang == Astro.props.lang;
+});
+
+console.log(filteredPosts);
+
+const data = Astro.props;
+---
+
+<Layout title="">
+    <main>
+        <BlogGrid>
+            {
+                filteredPosts.map((post) => {
+                    const [lang, ...slug] = post.slug.split('/');
+                    return (
+                        <BlogRow
+                            href={`/${data.lang}/blog/${slug.join('/')}`}
+                            title={post.data.title}
+                            body="Coucou"
+                            listIcon={post.data.listIcon}
+                        />
+                    );
+                })
+            }
+        </BlogGrid>
+    </main>
+</Layout>

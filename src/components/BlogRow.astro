@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+// import { BackgroundImage } from 'astro-imagetools/components';
+import '../styles/colors.css';
+
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	listIcon?: ImageMetadata;
+}
+
+const { href, title, body, listIcon } = Astro.props;
+---
+<li class="link-card">
+	
+		{listIcon &&
+			<img
+			  src={listIcon.src}
+			  alt=''
+			  class="object-cover object-center !m-0 aspect-square block"
+			  style={{objectFit: 'cover', width:'100%', height: '100%'}}
+			/>
+			||
+			<Icon 
+				name={'hugeicons:message-question'}
+				width={'100%'}
+				height={'100%'} />
+		}
+	
+	<a href={href}>
+		<h2>
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
+</li>
+<style>
+	.icon-wrapper {
+		color: var(--bittersweet);
+		padding: 1em;
+	}
+	.link-card {
+		list-style: none;
+		display: grid;
+		grid-template-columns: 25% 1fr;
+		padding: 1px;
+		background-color: var(--paynes-gray);
+		color: white;
+		/* border-radius: 16px; */
+		width: 100%;
+		border-color: var(--columbia-blue);
+		border-style: solid;
+		border-width: 0 0 1px 0;
+	}
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		opacity: 0.8;
+	}
+	h2 {
+		font-weight: bold;
+	}
+</style>

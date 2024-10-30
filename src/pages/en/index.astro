@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import type { collections } from '../../content/config';
+import Card from '../../components/Card.astro';
+import BlogRow from '../../components/BlogRow.astro';
+import BlogGrid from '../../components/BlogGrid.astro';
+ 
+const allPosts = await getCollection('blog');
+const pages = await getCollection('pages');
+ 
+---
+ 
+<Layout title="Epikowa">
+  <main>
+    <BlogGrid>
+      {allPosts.map((post) => <BlogRow href={'/blog/' + post.slug} title={post.data.title} body='Coucou' listIcon={post.data.listIcon}></BlogRow>)}
+    </BlogGrid>
+  </main>
+</Layout>
